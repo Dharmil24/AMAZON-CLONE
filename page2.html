@@ -1,0 +1,460 @@
+<html>
+
+<head>
+	<title>Prime Big Deal Days</title>
+	<style>
+		* {
+			margin: 0;
+			font-family: Arial;
+			border: border-box;
+		}
+
+		.navbar {
+			width: 100vw;
+			height: 60px;
+			background-color: #1A8D95;
+			color: white;
+			display: flex;
+			align-items: center;
+			border: 3px solid #1A8D95;
+		}
+
+		.nav-logo {
+			height: 50px;
+			width: 100px;
+			position: absolute;
+		}
+
+		.logo {
+			background-image: url("amazon_logo.png");
+			width: 100px;
+			background-size: cover;
+			height: 50px;
+			position: absolute;
+		}
+
+		.border {
+			border: 1px solid transparent;
+		}
+
+		.border:hover {
+			border: 1px solid white;
+		}
+
+		/** box2 */
+		.add-first {
+			color: #cccccc;
+			font-size: 0.80rem;
+			margin-left: 110px;
+		}
+
+		.add-sec {
+			font-size: 1rem;
+			margin-left: 110px;
+		}
+
+		.add-icon {
+			display: flex;
+			align-items: center;
+		}
+
+		/** box3 */
+		.nav-search {
+			display: flex;
+			justify-content: space-evenly;
+			width: 1000px;
+			height: 40px;
+			border-radius: 4px;
+			margin-left: 20px;
+		}
+
+		.search-select {
+			background-color: #f3f3f3;
+			width: 50px;
+			text-align: center;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			border: none;
+		}
+
+		.search-input {
+			width: 100%;
+			font-size: 1rem;
+			border: none;
+		}
+
+		.search-icon {
+			width: 45px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.2rem;
+			background-color: rgb(255, 174, 0);
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			color: #0f1111;
+		}
+
+		.nav-search:hover {
+			border: 3px solid orange;
+		}
+
+		/** box4 */
+		span {
+			font-size: 0.7rem;
+			margin-left: 20px;
+		}
+
+		.nav-second {
+			font-size: 0.85rem;
+			font-weight: 700;
+			margin-left: 20px;
+		}
+
+		/** box5 */
+		.nav-cart i {
+			font-size: 30px;
+			margin: 10px;
+		}
+
+		.nav-cart {
+			font-size: 0.85rem;
+			font-weight: 765;
+		}
+
+		/** panel */
+		.panel {
+			width: 100vw;
+			height: 40px;
+			background-color: #222f3d;
+			display: flex;
+			color: white;
+			align-items: center;
+			padding-left: 20px;
+		}
+
+		.panel-ops p {
+			display: inline;
+			margin-left: 15px;
+			margin-left: 20px;
+			padding-left: 5px;
+		}
+
+		.panel-ops {
+			width: 70%;
+			font-size: 0.87rem;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+
+		.header {
+			background-color: #0073e6;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			position: relative;
+
+		}
+
+		.header h1 {
+			margin: 0;
+			font-size: 24px;
+		}
+
+		.header button {
+			background-color: #ff9900;
+			border: none;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+
+		.deals-section {
+			background-color: #0073e6;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.deals-section h2 {
+			margin: 0;
+		}
+
+		.deal-grid {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 15px;
+			padding: 20px;
+			background-color: #BBB9B9;
+		}
+
+		.deal-item {
+			background-color: #fff;
+			/*border: 1px solid #ddd;*/
+			/*border-radius: 8px;*/
+			padding: 15px;
+			text-align: center;
+		}
+
+		.deal-item img {
+			width: 100%;
+			max-height: 150px;
+			object-fit: contain;
+			margin-bottom: 10px;
+		}
+
+		.deal-item .price {
+			font-size: 18px;
+			color: #0073e6;
+			margin-bottom: 5px;
+		}
+
+		.deal-item .discount {
+			color: #e63946;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+
+		.deal-item .old-price {
+			text-decoration: line-through;
+			color: #999;
+		}
+
+		.deal-item .description {
+			font-size: 14px;
+			color: #333;
+			margin-bottom: 10px;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #1A8D95;
+			color: white;
+		}
+
+		header {
+			background-color: #007185;
+			padding: 10px 20px;
+		}
+
+		nav ul {
+			list-style-type: none;
+			display: flex;
+			gap: 15px;
+		}
+
+		nav ul li a {
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin: 20px 0;
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.container {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+		}
+
+		.card {
+			background-color: white;
+			color: black;
+			text-align: center;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+			transition: transform 0.2s ease-in-out;
+		}
+
+		.card:hover {
+			transform: scale(1.05);
+		}
+
+		.card img {
+			width: 50px;
+			height: auto;
+			margin-bottom: 10px;
+		}
+
+		.card p {
+			font-size: 1rem;
+			font-weight: bold;
+		}
+
+		/** footer */
+		footer {
+			margin-top: 10px;
+		}
+
+		.foot-panel1 {
+			background-color: #37475a;
+			color: white;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.9rem
+		}
+		.foot-panel1 a.footer-btn {
+			display: inline-block;
+			background-color: #007185;
+			color: #fff;
+			padding: 8px 18px;
+			border-radius: 5px;
+			border: none;
+			font-size: 1rem;
+			text-decoration: none;
+			margin: 0 2px;
+			transition: background 0.2s, color 0.2s;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+			cursor: pointer;
+		}
+		.foot-panel1 a.footer-btn:hover {
+			background-color: #005f6b;
+			color: #ffd700;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+			<div class="nav-logo border">
+				<div class="logo"> </div>
+			</div>
+			<div class="nav-address border">
+				<p class="add-first"> Deliver to </p>
+				<div class="add-icon">
+					<i class="fa-light fa-location-dot"></i>
+					<p class="add-sec"> India </p>
+				</div>
+			</div>
+			<div class="nav-search">
+				<select class="search-select">
+					<option> All </option>
+				</select>
+				<input placeholder="Search Amazon" class="search-input">
+				<div class="search-icon"> <i class="fa-light fa-magnifying-glass"></i>
+				</div>
+			</div>
+			<div class="nav-singin border">
+				<p><span>Hello, sign in</span></p>
+				<p class="nav-second">Account & Lists</p>
+			</div>
+			<div class="nav-return border">
+				<p><span>Returns</span></p>
+				<p class="nav-second"> & Orders</p>
+			</div>
+			<div class="nav-cart border">
+				<i class="fa-solid fa-cart-shopping"></i>
+				Cart
+			</div>
+		</div>
+		<div class="panel">
+			<div class="panel-ops">
+				<p><button type="submit" class="today's deal"><a href="page1.html"> Home </button></a></p>
+				<p><button type="submit" class="today's deal"><a href="page2.html"> Today's Deals </button></a></p>
+				<p><button type="submit" class="today's deal"><a href="page3.html"> Customer service </button></a></p>
+				<p><button type="submit" class="gift cards"><a href="page4.html"> Gift Cards </button></a></p>
+				<p><button type="submit" class="today's deal"><a href="page5.html"> Registry </button></a></p>
+			</div>
+		</div>
+	</header>
+	<div class="header">
+		<img src="2.1.png">
+	</div>
+
+	<div class="deals-section">
+		<h2>Featured Deals</h2>
+	</div>
+
+	<div class="deal-grid">
+		<div class="deal-item">
+			<img src="2.2.jpg" alt="Breville BES870XL Coffee Maker">
+			<div class="discount">27% off</div>
+			<div class="price">$549.95</div>
+			<div class="old-price">$749.95</div>
+			<div class="description">Breville BES870XL Coffee Maker</div>
+		</div>
+		<div class="deal-item">
+			<img src="2.3.jpg" alt="ASUS ROG Strix G16">
+			<div class="discount">21% off</div>
+			<div class="price">$1,099.99</div>
+			<div class="old-price">$1,399.99</div>
+			<div class="description">ASUS ROG Strix G16 (2024) Gaming Laptop</div>
+		</div>
+		<div class="deal-item">
+			<img src="2.4.jpg" alt="Gym People Leggings">
+			<div class="discount">20% off</div>
+			<div class="price">$19.99</div>
+			<div class="old-price">$24.99</div>
+			<div class="description">The Gym People Thick High Waisted Leggings</div>
+		</div>
+		<div class="deal-item">
+			<img src="2.5.jpg" alt="Keurig K-Supreme">
+			<div class="discount">44% off</div>
+			<div class="price">$94.99</div>
+			<div class="old-price">$169.99</div>
+			<div class="description">Keurig K-Supreme Single Serve Coffee Maker</div>
+		</div>
+		<div class="deal-item">
+			<img src="2.6.jpg" alt="Laneige Water Sleeping Mask">
+			<div class="discount">30% off</div>
+			<div class="price">$22.40</div>
+			<div class="old-price">$32.00</div>
+			<div class="description">LANEIGE Water Sleeping Mask: Korean Skincare</div>
+		</div>
+		<div class="deal-item">
+			<img src="2.7.jpg" alt="American Tourister Stratum">
+			<div class="discount">58% off</div>
+			<div class="price">$184.99</div>
+			<div class="old-price">$439.97</div>
+			<div class="description">American Tourister Stratum Luggage Set</div>
+		</div>
+	</div>
+	<footer>
+		<div class="foot-panel1" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+			<a href="page1.html" class="footer-btn">Pg. 1</a>
+			<a href="page2.html" class="footer-btn">Pg. 2</a>
+			<a href="page3.html" class="footer-btn">Pg. 3</a>
+			<a href="page4.html" class="footer-btn">Pg. 4</a>
+			<a href="page5.html" class="footer-btn">Pg. 5</a>
+			<a href="#" class="footer-btn">Back to top</a>
+		</div>
+		<div style="background-color: #232F3E; color: #fff; text-align: center; padding: 10px 0; font-size: 0.85rem;">
+			&copy; 2024 Amazon Clone. All rights reserved.
+		</div>
+	</footer>
+</body>
+
+</html>

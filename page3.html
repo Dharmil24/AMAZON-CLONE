@@ -1,0 +1,492 @@
+<html>
+
+<head>
+  <title>Customer Service Page</title>
+  <style>
+    * {
+      margin: 0;
+      font-family: Arial;
+      border: border-box;
+    }
+
+    .navbar {
+      height: 60px;
+      background-color: #0f1111;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo {
+      height: 50px;
+      width: 100px;
+      position: absolute;
+    }
+
+    .logo {
+      background-image: url("amazon_logo.png");
+      width: 100px;
+      background-size: cover;
+      height: 50px;
+      position: absolute;
+    }
+
+    .border {
+      border: 1px solid transparent;
+    }
+
+    .border:hover {
+      border: 1px solid white;
+    }
+
+    /** box2 */
+    .add-first {
+      color: #cccccc;
+      font-size: 0.80rem;
+      margin-left: 110px;
+    }
+
+    .add-sec {
+      font-size: 1rem;
+      margin-left: 110px;
+    }
+
+    .add-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    /** box3 */
+    .nav-search {
+      display: flex;
+      justify-ontent: space-evenly;
+      width: 1000px;
+      height: 40px;
+      border-radius: 4px;
+      margin-left: 20px;
+    }
+
+    .search-select {
+      background-color: #f3f3f3;
+      width: 50px;
+      text-align: center;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border: none;
+    }
+
+    .search-input {
+      width: 100%;
+      font-size: 1rem;
+      border: none;
+    }
+
+    .search-icon {
+      width: 45px;
+      display: flex;
+      justify-content: center;
+      align-item: center;
+      font-size: 1.2rem;
+      background-color: rgb(255, 174, 0);
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      color: #0f1111;
+    }
+
+    .nav-search:hover {
+      border: 3px solid orange;
+    }
+
+    /** box4 */
+    span {
+      font-size: 0.7rem;
+      margin-left: 20px;
+    }
+
+    .nav-second {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-left: 20px;
+    }
+
+    /** box5 */
+    .nav-cart i {
+      font-size: 30px;
+      margin: 10px;
+    }
+
+    .nav-cart {
+      font-size: 0.85rem;
+      font-weight: 765;
+    }
+
+    /** panel */
+    .panel {
+      height: 40px;
+      background-color: #222f3d;
+      display: flex;
+      color: white;
+      align-items: center;
+      padding-left: 20px;
+    }
+
+    .panel-ops p {
+      display: inline;
+      margin-left: 15px;
+      margin-left: 20px;
+      padding-left: 5px;
+    }
+
+    .panel-ops {
+      width: 70%;
+      font-size: 0.87rem;
+    }
+
+    /** Style for the navigation bar */
+    .navbar {
+      display: flex;
+      background-color: #007e87;
+      padding: 10px;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: #ffffff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar a:hover {
+      background-color: #005e63;
+      color: #ffffff;
+    }
+
+    .navbar .active {
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .welcome-section {
+      background-color: #007e87;
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .welcome-section h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .welcome-section p {
+      font-size: 16px;
+      margin: 10px 0 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .box {
+      background-color: #007b8a;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .box h3 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .box img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .box:hover {
+      background-color: #005f66;
+    }
+
+    .container {
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .search-bar h2 {
+      margin-bottom: 10px;
+    }
+
+    .search-bar input {
+      width: 50%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-betweens;
+      padding-left: 40px;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 10px 0;
+      font-size: 16px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .sidebar ul li.active {
+      background-color: #007b8a;
+      color: white;
+      padding-left: 10px;
+      border-radius: 5px;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #f0f0f0;
+      transition: all 0.3s ease;
+    }
+
+    .help-options {
+      width: 74%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .help-options .box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-left: 50px;
+    }
+
+    .help-options .box:hover {
+      background-color: #f1f1f1;
+    }
+
+    /** footer */
+    footer {
+      margin-top: 10px;
+    }
+
+    .foot-panel1 {
+      background-color: #37475a;
+      color: white;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem
+    }
+		.foot-panel1 a.footer-btn {
+			display: inline-block;
+			background-color: #007185;
+			color: #fff;
+			padding: 8px 18px;
+			border-radius: 5px;
+			border: none;
+			font-size: 1rem;
+			text-decoration: none;
+			margin: 0 2px;
+			transition: background 0.2s, color 0.2s;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+			cursor: pointer;
+		}
+		.foot-panel1 a.footer-btn:hover {
+			background-color: #005f6b;
+			color: #ffd700;
+		}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-logo border">
+        <div class="logo"> </div>
+      </div>
+      <div class="nav-address border">
+        <p class="add-first"> Deliver to </p>
+        <div class="add-icon">
+          <i class="fa-light fa-location-dot"></i>
+          <p class="add-sec"> India </p>
+        </div>
+      </div>
+      <div class="nav-search">
+        <select class="search-select">
+          <option> All </option>
+        </select>
+        <input placeholder="Search Amazon" class="search-input">
+        <div class="search-icon"> <i class="fa-light fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="nav-singin border">
+        <p><span>Hello, sign in</span></p>
+        <p class="nav-second">Account & Lists</p>
+      </div>
+      <div class="nav-return border">
+        <p><span>Returns</span></p>
+        <p class="nav-second"> & Orders</p>
+      </div>
+      <div class="nav-cart border">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-ops">
+        <p><button type="submit" class="today's deal"><a href="page1.html"> Home </button></a></p>
+        <p><button type="submit" class="today's deal"><a href="page2.html"> Today's Deals </button></a></p>
+        <p><button type="submit" class="today's deal"><a href="page3.html"> Customer service </button></a></p>
+        <p><button type="submit" class="gift cards"><a href="page4.html"> Gift Cards </button></a></p>
+        <p><button type="submit" class="today's deal"><a href="page5.html"> Registry </button></a></p>
+      </div>
+    </div>
+  </header>
+  <div class="welcome-section">
+    <h1>Welcome to Amazon Customer Service</h1>
+    <p>What would you like help with today? You can quickly take care of most things here, or connect with us when
+      needed.</p>
+  </div>
+  <div class="container">
+    <div class="box">
+      <img src="3.1.png" alt="Delivery icon">
+      <h3>A delivery, order or return</h3>
+    </div>
+    <div class="box">
+      <img src="3.2.png" alt="Prime icon">
+      <h3>Prime</h3>
+    </div>
+    <div class="box">
+      <img src="3.3.png" alt="Payment icon">
+      <h3>Payment, charges or gift cards</h3>
+    </div>
+    <div class="box">
+      <img src="3.4.png" alt="Address icon">
+      <h3>Address, security & privacy</h3>
+    </div>
+    <div class="box">
+      <img src="3.5.png" alt="Memberships icon">
+      <h3>Memberships, subscriptions or communications</h3>
+    </div>
+    <div class="box">
+      <img src="3.6.png" alt="Devices icon">
+      <h3>Kindle, Fire, Alexa or other Amazon devices</h3>
+    </div>
+    <div class="box">
+      <img src="3.7.png" alt="eBooks icon">
+      <h3>eBooks, Prime Videos, Music or Games</h3>
+    </div>
+    <div class="box">
+      <img src="3.8.png" alt="Accessibility icon">
+      <h3>Accessibility</h3>
+    </div>
+    <div class="box">
+      <img src="3.10.png" alt="Report icon">
+      <h3>Report Something Suspicious</h3>
+    </div>
+  </div>
+  <div class="search-bar">
+    <h2>Search our help library</h2>
+    <input type="text" placeholder="Type something like, 'question about a charge'">
+  </div>
+  <div class="content">
+    <!-- Sidebar menu -->
+    <div class="sidebar">
+      <ul>
+        <li class="active">Take Quick Actions</li>
+        <li>Where's my stuff</li>
+        <li>Shipping and Delivery</li>
+        <li>Returns, Refunds and Product Support</li>
+        <li>Managing Your Account</li>
+        <li>Security & Privacy</li>
+        <li>Payment, Pricing and Promotions</li>
+        <li>Devices & Digital Solutions</li>
+        <li>Amazon Business Accounts</li>
+        <li>Large Items and Heavy-Bulky Services</li>
+        <li>Other topics & Help sites</li>
+      </ul>
+    </div>
+    <!-- Right-side help options -->
+    <div class="help-options">
+      <div class="box">
+        <font color="black">Track your package</font>
+      </div>
+      <div class="box">
+        <font color="black">Return Items You Ordered</font>
+      </div>
+      <div class="box">
+        <font color="black">Check status of a refund</font>
+      </div>
+      <div class="box">
+        <font color="black">Update Your Password</font>
+      </div>
+      <div class="box">
+        <font color="black">Amazon Prime</font>
+      </div>
+      <div class="box">
+        <font color="black">End Your Amazon Prime Membership</font>
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer>
+    <div class="foot-panel1" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <a href="page1.html" class="footer-btn">Pg. 1</a>
+        <a href="page2.html" class="footer-btn">Pg. 2</a>
+        <a href="page3.html" class="footer-btn">Pg. 3</a>
+        <a href="page4.html" class="footer-btn">Pg. 4</a>
+        <a href="page5.html" class="footer-btn">Pg. 5</a>
+        <a href="#" class="footer-btn">Back to top</a>
+    </div>
+    <div style="background-color: #232F3E; color: #fff; text-align: center; padding: 10px 0; font-size: 0.85rem;">
+        &copy; 2024 Amazon Clone. All rights reserved.
+    </div>
+</footer>
+</body>
+
+</html>

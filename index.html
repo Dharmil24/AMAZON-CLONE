@@ -1,0 +1,168 @@
+<html>
+<head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+
+		body {
+			background-color: #f3f3f3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.container {
+			text-align: center;
+			max-width: 350px;
+		}
+
+		.logo {
+			width: 120px;
+			margin-bottom: 20px;
+			color: black;
+		}
+
+		.sign-in-box {
+			background-color: white;
+			padding: 20px;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+		}
+
+		h2 {
+			font-size: 24px;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+
+		form {
+			margin-top: 20px;
+		}
+
+		label {
+			display: block;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #888;
+			border-radius: 4px;
+			margin-bottom: 15px;
+			font-size: 16px;
+		}
+
+		.continue-btn {
+			width: 100%;
+			padding: 10px;
+			background-color: #f0c14b;
+			border: 1px solid #a88734;
+			border-radius: 4px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		.continue-btn:hover {
+			background-color: #ddb347;
+		}
+
+		.terms {
+			font-size: 12px;
+			margin-top: 10px;
+		}
+
+		.terms a {
+			color: #0066c0;
+			text-decoration: none;
+		}
+
+		.terms a:hover {
+			text-decoration: underline;
+		}
+
+		.help-link {
+			display: block;
+			margin-top: 10px;
+			font-size: 12px;
+			color: #0066c0;
+			text-decoration: none;
+		}
+
+		.help-link:hover {
+			text-decoration: underline;
+		}
+
+		.new-account {
+			margin-top: 20px;
+		}
+
+		.new-account hr {
+			border: none;
+			border-top: 1px solid #ddd;
+		}
+
+		.new-account span {
+			background-color: white;
+			padding: 0 10px;
+			position: relative;
+			top: -10px;
+		}
+
+		.create-account-btn {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			background-color: #e7e9ec;
+			border: 1px solid #a88734;
+			border-radius: 4px;
+			font-size: 16px;
+			text-align: center;
+			margin-top: 10px;
+			text-decoration: none;
+			color: black;
+		}
+
+		.create-account-btn:hover {
+			background-color: #d6d8db;
+		}
+	</style>
+    <title>Amazon Sign In</title>
+	<style>
+		body {
+			background-color: #404040;
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <img src="amazon_logo.png" alt="Amazon" class="logo"> <!-- Add a link to the Amazon logo -->
+        <div class="sign-in-box">
+            <h2>Sign in</h2>
+            <form action="#">
+                <label for="email">Email or mobile phone number</label>
+                <input type="text" id="email" name="email" required>
+                <button type="submit" class="continue-btn"><a href="page1.html">Continue</button></a>
+                <p class="terms">
+                    By continuing, you agree to Amazon's 
+                    <a href="#">Conditions of Use</a> and 
+                    <a href="#">Privacy Notice</a>.
+                </p>
+                <a href="#" class="help-link">Need help?</a>
+            </form>
+            <div class="new-account">
+                <hr>
+                <span>New to Amazon?</span>
+                <a href="#" class="create-account-btn">Create your Amazon account</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

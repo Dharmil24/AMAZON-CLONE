@@ -1,0 +1,477 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registry & Gifting</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		* {
+			margin: 0;
+			font-family: Arial;
+			border: border-box;
+		}
+
+		.navbar {
+			height: 60px;
+			background-color: #0f1111;
+			color: white;
+			display: flex;
+			align-items: center;
+		}
+
+		.nav-logo {
+			height: 50px;
+			width: 100px;
+			position: absolute;
+		}
+
+		.logo {
+			background-image: url("amazon_logo.png");
+			width: 100px;
+			background-size: cover;
+			height: 50px;
+			position: absolute;
+		}
+
+		.border {
+			border: 1px solid transparent;
+		}
+
+		.border:hover {
+			border: 1px solid white;
+		}
+
+		/** box2 */
+		.add-first {
+			color: #cccccc;
+			font-size: 0.80rem;
+			margin-left: 110px;
+		}
+
+		.add-sec {
+			font-size: 1rem;
+			margin-left: 110px;
+		}
+
+		.add-icon {
+			display: flex;
+			align-items: center;
+		}
+
+		/** box3 */
+		.nav-search {
+			display: flex;
+			justify-ontent: space-evenly;
+			width: 1000px;
+			height: 40px;
+			border-radius: 4px;
+			margin-left: 20px;
+		}
+
+		.search-select {
+			background-color: #f3f3f3;
+			width: 50px;
+			text-align: center;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			border: none;
+		}
+
+		.search-input {
+			width: 100%;
+			font-size: 1rem;
+			border: none;
+		}
+
+		.search-icon {
+			width: 45px;
+			display: flex;
+			justify-content: center;
+			align-item: center;
+			font-size: 1.2rem;
+			background-color: rgb(255, 174, 0);
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			color: #0f1111;
+		}
+
+		.nav-search:hover {
+			border: 3px solid orange;
+		}
+
+		/** box4 */
+		span {
+			font-size: 0.7rem;
+			margin-left: 20px;
+		}
+
+		.nav-second {
+			font-size: 0.85rem;
+			font-weight: 700;
+			margin-left: 20px;
+		}
+
+		/** box5 */
+		.nav-cart i {
+			font-size: 30px;
+			margin: 10px;
+		}
+
+		.nav-cart {
+			font-size: 0.85rem;
+			font-weight: 765;
+		}
+
+		/** panel */
+		.panel {
+			height: 40px;
+			background-color: #222f3d;
+			display: flex;
+			color: white;
+			align-items: center;
+			padding-left: 20px;
+		}
+
+		.panel-ops p {
+			display: inline;
+			margin-left: 15px;
+			margin-left: 20px;
+			padding-left: 5px;
+		}
+
+		.panel-ops {
+			width: 70%;
+			font-size: 0.87rem;
+		}
+
+		/* styles.css */
+
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #fff;
+			padding: 10px 20px;
+			border-bottom: 1px solid #ddd;
+		}
+
+		header nav ul {
+			display: flex;
+			list-style: none;
+			padding: 0;
+		}
+
+		header nav ul li {
+			margin-right: 20px;
+		}
+
+		header nav ul li a {
+			text-decoration: none;
+			color: #333;
+		}
+
+		.hero {
+			/*display: flex;*/
+			align-items: center;
+			background-color: #f3f3f3;
+		}
+
+		.image-container {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+		}
+
+		.image-container img {
+			width: 95%;
+			max-width: 1500px;
+			border-radius: 10px;
+			height: 260px;
+		}
+
+		.hero-text {
+			flex: 1;
+			text-align: center;
+		}
+
+		.hero-text h1 {
+			color: #333;
+			font-size: 2em;
+		}
+
+		.hero-text p {
+			color: #555;
+			margin-top: 10px;
+		}
+
+		.hero-text button {
+			background-color: #f0c14b;
+			border: none;
+			padding: 10px 20px;
+			font-size: 1em;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-top: 20px;
+		}
+
+		.search-section {
+			background-color: #fafafa;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.search-section h2 {
+			color: #333;
+		}
+
+		.search-bar {
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+		}
+
+		.search-bar input[type="text"] {
+			padding: 10px;
+			margin-right: 10px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			width: 700px;
+		}
+
+		.search-bar button {
+			background-color: #333;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f7f7f7;
+		}
+
+		.categories-section {
+			padding: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.categories-section h2 {
+			font-size: 1.8em;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.categories-section button {
+			background-color: #007bff;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			font-size: 1em;
+			border-radius: 50%;
+			cursor: pointer;
+			margin-left: 10px;
+		}
+
+		.categories-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: 60px;
+		}
+
+		.category-card {
+			background-color: white;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			text-align: left;
+			width: 300px;
+		}
+
+		.category-card img {
+			width: 100%;
+			height: auto;
+		}
+
+		.category-card h3 {
+			font-size: 1.2em;
+			color: #333;
+			margin: 10px;
+		}
+
+		.category-card p {
+			font-size: 0.9em;
+			color: #666;
+			margin: 10px;
+		}
+
+		/** footer */
+		footer {
+			margin-top: 10px;
+		}
+
+		.foot-panel1 {
+			background-color: #37475a;
+			color: white;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.9rem
+		}
+		.foot-panel1 a.footer-btn {
+			display: inline-block;
+			background-color: #007185;
+			color: #fff;
+			padding: 8px 18px;
+			border-radius: 5px;
+			border: none;
+			font-size: 1rem;
+			text-decoration: none;
+			margin: 0 2px;
+			transition: background 0.2s, color 0.2s;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+			cursor: pointer;
+		}
+		.foot-panel1 a.footer-btn:hover {
+			background-color: #005f6b;
+			color: #ffd700;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+			<div class="nav-logo border">
+				<div class="logo"> </div>
+			</div>
+			<div class="nav-address border">
+				<p class="add-first"> Deliver to </p>
+				<div class="add-icon">
+					<i class="fa-light fa-location-dot"></i>
+					<p class="add-sec"> India </p>
+				</div>
+			</div>
+			<div class="nav-search">
+				<select class="search-select">
+					<option> All </option>
+				</select>
+				<input placeholder="Search Amazon" class="search-input">
+				<div class="search-icon"> <i class="fa-light fa-magnifying-glass"></i>
+				</div>
+			</div>
+			<div class="nav-singin border">
+				<p><span>Hello, sign in</span></p>
+				<p class="nav-second">Account & Lists</p>
+			</div>
+			<div class="nav-return border">
+				<p><span>Returns</span></p>
+				<p class="nav-second"> & Orders</p>
+			</div>
+			<div class="nav-cart border">
+				<i class="fa-solid fa-cart-shopping"></i>
+				Cart
+			</div>
+		</div>
+		<div class="panel">
+			<div class="panel-ops">
+				<p><button type="submit" class="today's deal"><a href="page1.html"> Home </button></a></p>
+				<p><button type="submit" class="today's deal"><a href="page2.html"> Today's Deals </button></a></p>
+				<p><button type="submit" class="today's deal"><a href="page3.html"> Customer service </button></a></p>
+				<p><button type="submit" class="gift cards"><a href="page4.html"> Gift Cards </button></a></p>
+				<p><button type="submit" class="today's deal"><a href="page5.html"> Registry </button></a></p>
+			</div>
+		</div>
+
+	</header>
+
+	<section class="hero">
+		<div class="image-container">
+			<img src="5.jpg" alt="Gift boxes and decorations">
+		</div>
+		<div class="hero-text">
+			<h1>Unwrap joyful possibilities</h1>
+			<p>For weddings, babies, birthdays, or any life event, registries and gift lists ensure the perfect gifts.
+			</p>
+			<button>Create a registry or gift list</button>
+		</div>
+	</section>
+
+	<section class="search-section">
+		<h2>Find a registry or gift list</h2>
+		<div class="search-bar">
+			<input type="text" placeholder="Search by name">
+			<button>Search</button>
+		</div>
+	</section>
+	<section class="categories-section">
+		<h2>Create a registry or gift list <button>+</button></h2>
+		<div class="categories-grid">
+			<div class="category-card">
+				<img src="5.1.jpg" alt="Baby">
+				<h3>Baby</h3>
+				<p>Essentials to support your growing family</p>
+			</div>
+			<div class="category-card">
+				<img src="5.2.jpg" alt="Wedding">
+				<h3>Wedding</h3>
+				<p>Everything you need for a life together</p>
+			</div>
+			<div class="category-card">
+				<img src="5.3.jpg" alt="Birthday">
+				<h3>Birthday</h3>
+				<p>Celebrate another year around the sun</p>
+			</div>
+			<div class="category-card">
+				<img src="5.4.jpg" alt="Holiday">
+				<h3>Holiday</h3>
+				<p>Share gift ideas with family and friends</p>
+			</div>
+			<div class="category-card">
+				<img src="5.5.jpg" alt="Housewarming">
+				<h3>Housewarming</h3>
+				<p>Furnish your new home</p>
+			</div>
+			<div class="category-card">
+				<img src="5.6.jpg" alt="Graduation">
+				<h3>Graduation</h3>
+				<p>Prepare for your next chapter</p>
+			</div>
+			<div class="category-card">
+				<img src="5.7.jpg" alt="Pet">
+				<h3>Pet</h3>
+				<p>For your pet's special day</p>
+			</div>
+			<div class="category-card">
+				<img src="5.8.jpg" alt="Other occasions">
+				<h3>Other occasions</h3>
+				<p>Customize your Gift List for any occasion</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="foot-panel1" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+			<a href="page1.html" class="footer-btn">Pg. 1</a>
+			<a href="page2.html" class="footer-btn">Pg. 2</a>
+			<a href="page3.html" class="footer-btn">Pg. 3</a>
+			<a href="page4.html" class="footer-btn">Pg. 4</a>
+			<a href="page5.html" class="footer-btn">Pg. 5</a>
+			<a href="#" class="footer-btn">Back to top</a>
+		</div>
+		<div style="background-color: #232F3E; color: #fff; text-align: center; padding: 10px 0; font-size: 0.85rem;">
+			&copy; 2024 Amazon Clone. All rights reserved.
+		</div>
+	</footer>
+</body>
+
+</html>
